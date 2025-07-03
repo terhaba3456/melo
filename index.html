@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MELO ROMA - Casino Affiliate Platform</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>MELO ROMA</h1>
+            </div>
+            <nav class="nav">
+                <a href="#home">Ana Sayfa</a>
+                <a href="#sponsors">Sponsorlar</a>
+                <a href="#channels">Kanallarımız</a>
+                <a href="#deals">Yeni Anlaşmalar</a>
+                <a href="#stats">İstatistikler</a>
+            </nav>
+            <div class="hamburger" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>MELO ROMA</h2>
+            <button onclick="toggleSidebar()" class="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#home" onclick="toggleSidebar()">
+                <i class="fas fa-home"></i> Ana Sayfa
+            </a>
+            <a href="#sponsors" onclick="toggleSidebar()">
+                <i class="fas fa-star"></i> Sponsorlar
+            </a>
+            <a href="#channels" onclick="toggleSidebar()">
+                <i class="fab fa-telegram"></i> Kanallarımız
+            </a>
+            <a href="#deals" onclick="toggleSidebar()">
+                <i class="fas fa-handshake"></i> Yeni Anlaşmalar
+            </a>
+            <a href="#stats" onclick="toggleSidebar()">
+                <i class="fas fa-chart-bar"></i> İstatistikler
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Banner Section -->
+        <section id="home" class="banner-section">
+            <div class="banner-container">
+                <div class="banner-slider" id="bannerSlider">
+                    <!-- Banners will be loaded dynamically -->
+                </div>
+                <div class="banner-dots" id="bannerDots"></div>
+                <button class="banner-btn prev" onclick="prevSlide()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="banner-btn next" onclick="nextSlide()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Sponsors Section -->
+        <section id="sponsors" class="sponsors-section">
+            <div class="container">
+                <h2>Sponsorlarımız</h2>
+                
+                <!-- Filter Buttons -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterSponsors('all')">Tümü</button>
+                    <button class="filter-btn" onclick="filterSponsors('vip-sponsorlar')">VIP Sponsorlar</button>
+                    <button class="filter-btn" onclick="filterSponsors('ana-sponsorlar')">Ana Sponsorlar</button>
+                    <button class="filter-btn" onclick="filterSponsors('guvenilir-sponsorlar')">Güvenilir Sponsorlar</button>
+                    <button class="filter-btn" onclick="filterSponsors('rasgorun-oynadigi')">Rasgorun Oynadığı</button>
+                </div>
+
+                <!-- Search Box -->
+                <div class="search-box">
+                    <input type="text" id="sponsorSearch" placeholder="Sponsor ara..." oninput="searchSponsors()">
+                    <i class="fas fa-search"></i>
+                </div>
+
+                <!-- Sponsors Grid -->
+                <div class="sponsors-grid" id="sponsorsGrid">
+                    <!-- Sponsors will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Channels Section -->
+        <section id="channels" class="channels-section">
+            <div class="container">
+                <h2>Telegram Kanallarımız</h2>
+                <div class="channels-grid" id="channelsGrid">
+                    <!-- Channels will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Deals Section -->
+        <section id="deals" class="deals-section">
+            <div class="container">
+                <h2>Yeni Anlaşmalar</h2>
+                <div class="deals-grid" id="dealsGrid">
+                    <!-- Deals will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats" class="stats-section">
+            <div class="container">
+                <h2>İstatistikler</h2>
+                <div class="stats-grid" id="statsGrid">
+                    <!-- Stats will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 MELO ROMA. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Popup Modal -->
+    <div class="popup-modal" id="popupModal">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closePopup()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup-body" id="popupBody">
+                <!-- Popup content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Banner -->
+    <div class="bottom-banner" id="bottomBanner">
+        <div class="bottom-banner-content">
+            <span id="bottomBannerText">Melo Yazılım</span>
+            <button onclick="closeBottomBanner()" class="bottom-banner-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
